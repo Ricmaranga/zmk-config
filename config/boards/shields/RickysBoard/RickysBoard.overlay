@@ -1,0 +1,29 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/{
+    chosen {
+        zmk,kscan = &default_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "default_kscan";
+
+    input-gpios = 
+        <&nice_nano_v2 031 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 029 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 002 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 115 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 113 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 111 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 010 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 020 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 022 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 024 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 100 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 011 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 104 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&nice_nano_v2 106 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>    
+    };
+};
